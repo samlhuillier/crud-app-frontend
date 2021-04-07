@@ -11,11 +11,16 @@ export class UsersComponent implements OnInit {
   users: User[];
   constructor(private usersService: UsersService) { }
 
-  addUser(user: User){//Will need to be called by the form
-    this.usersService.addUser(user).subscribe(user => this.users.push(user))
+  addUser(user){//So we're not actually sending a user type but rather a semi-user type
+    this.usersService.addUser(user).subscribe((user: User) => {
+      console.log(user)
+      this.users.push(user)
+    })
   }
 
   ngOnInit(): void {
+    //Let's just try adding a user before getting all users 
+    // this.addUser({name: 'newuser', email: 'newuser@gmail.com'})
     this.usersService.getUsers().subscribe(users => this.users=users)
   }
 

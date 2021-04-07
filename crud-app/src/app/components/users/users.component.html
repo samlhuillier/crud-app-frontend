@@ -4,6 +4,8 @@
     <li>{{user.id}} {{user.name}} {{user.email}}</li>
 </ul> -->
 
+<app-add-user (addUser)="addUser($event)"></app-add-user>
+
 <app-user-item 
     *ngFor="let user of users" 
     [user]="user"
