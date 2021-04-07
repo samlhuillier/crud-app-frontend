@@ -11,11 +11,12 @@ export class UsersComponent implements OnInit {
   users: User[];
   constructor(private usersService: UsersService) { }
 
+  addUser(user: User){//Will need to be called by the form
+    this.usersService.addUser(user).subscribe(user => this.users.push(user))
+  }
+
   ngOnInit(): void {
-    this.usersService.getUsers().subscribe(users => {
-      console.log(users)
-      this.users=users
-    })
+    this.usersService.getUsers().subscribe(users => this.users=users)
   }
 
 }

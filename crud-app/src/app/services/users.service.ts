@@ -22,4 +22,8 @@ export class UsersService {
   getUsers():Observable<User[]>{
     return this.http.get<User[]>(this.usersUrl)
   }
+
+  addUser(user: User){
+    return this.http.post<User>(this.usersUrl, user, httpOptions)
+  }
 }
