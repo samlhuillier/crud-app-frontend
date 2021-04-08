@@ -8,7 +8,8 @@ import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
 import { UserItemComponent } from './components/user-item/user-item.component';
 import { AddUserComponent } from './components/add-user/add-user.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,9 @@ import { AddUserComponent } from './components/add-user/add-user.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

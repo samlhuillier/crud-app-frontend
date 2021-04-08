@@ -2,11 +2,12 @@
 
     <th>{{user.name}}</th>
     <th>{{user.email}} 
-        <button class="delete" (click)="onDelete(user)">x</button>
-        <button class="Modify" (click)="wantModify(user)">Modify</button>
+        <button class="Modify" (click)="wantModify(user)" mat-raised-button color="primary">Modify</button>
+        <button class="delete" (click)="onDelete(user)" mat-raised-button color="warn">Delete</button>
+        
         <form [ngClass]="setClasses()" (ngSubmit)="onSubmit()" >
             <input type="text" name="name" [(ngModel)]="name" placeholder="Name">
-            <input type="text" name="email" [(ngModel)]="email" placeholder="Email">
+            <input type="email" name="email" [(ngModel)]="email" placeholder="Email">
             <input type="submit" value="Modify User Values" class="btn">
         </form>
         </th> 
