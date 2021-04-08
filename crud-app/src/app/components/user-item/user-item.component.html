@@ -1,8 +1,16 @@
-<p>{{user.name}} {{user.email}}</p>
+
+
+    <th>{{user.name}}</th>
+    <th>{{user.email}} 
+        <button class="delete" (click)="onDelete(user)">x</button>
+        <form class="form" (ngSubmit)="onSubmit()" >
+            <input type="text" name="name" [(ngModel)]="name" placeholder="Name">
+            <input type="text" name="email" [(ngModel)]="email" placeholder="Email">
+            <input type="submit" value="Modify User Values" class="btn">
+        </form>
+        </th> 
+
 <!-- <button (click)="onModify(user)">Modify</button> -->
-<form class="form" (ngSubmit)="onSubmit()">
-    <input type="text" name="name" [(ngModel)]="name" placeholder="Name">
-    <input type="text" name="email" [(ngModel)]="email" placeholder="Email">
-    <input type="submit" value="Submit" class="btn">
-</form>
-<button (click)="onDelete(user)">x</button>
+<!-- 
+ -->
+

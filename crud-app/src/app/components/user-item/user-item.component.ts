@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { User } from '../../models/User'
 @Component({
-  selector: 'app-user-item',
+  selector: '[app-user-item]',
   templateUrl: './user-item.component.html',
   styleUrls: ['./user-item.component.css']
 })

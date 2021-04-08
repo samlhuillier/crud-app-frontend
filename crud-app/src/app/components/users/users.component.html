@@ -5,11 +5,15 @@
 </ul> -->
 
 <app-add-user (addUser)="addUser($event)"></app-add-user>
-
-<app-user-item 
-    *ngFor="let user of users" 
-    [user]="user"
-    (deleteUser)="deleteUser($event)"
-    (modifyUser)="modifyUser($event)"
-    >
-</app-user-item>
+<table style="width: 100%">
+    <tr>
+        <th>Name</th>
+        <th>Email</th> 
+      </tr>
+<tr *ngFor="let user of users" app-user-item 
+        [user]="user"
+        (deleteUser)="deleteUser($event)"
+        (modifyUser)="modifyUser($event)"
+        >
+</tr>
+</table>
