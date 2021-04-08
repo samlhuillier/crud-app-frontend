@@ -3,7 +3,8 @@
     <th>{{user.name}}</th>
     <th>{{user.email}} 
         <button class="delete" (click)="onDelete(user)">x</button>
-        <form class="form" (ngSubmit)="onSubmit()" >
+        <button class="Modify" (click)="wantModify(user)">Modify</button>
+        <form [ngClass]="setClasses()" (ngSubmit)="onSubmit()" >
             <input type="text" name="name" [(ngModel)]="name" placeholder="Name">
             <input type="text" name="email" [(ngModel)]="email" placeholder="Email">
             <input type="submit" value="Modify User Values" class="btn">

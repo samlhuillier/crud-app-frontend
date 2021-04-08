@@ -7,7 +7,9 @@
     cursor: pointer;
     /* float: right; */
   }
-
+  .hide {
+    display: none;
+  }
   
   /* .todo {
     background: #f4f4f4;
