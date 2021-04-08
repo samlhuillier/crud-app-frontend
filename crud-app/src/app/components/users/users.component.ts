@@ -17,7 +17,10 @@ export class UsersComponent implements OnInit {
       this.users.push(user)
     })
   }
-
+  deleteUser(user: User){
+    this.users = this.users.filter(u => u.id !== user.id)
+    this.usersService.deleteUser(user).subscribe()
+  }
   ngOnInit(): void {
     //Let's just try adding a user before getting all users 
     // this.addUser({name: 'newuser', email: 'newuser@gmail.com'})

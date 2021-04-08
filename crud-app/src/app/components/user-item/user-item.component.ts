@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { User } from '../../models/User'
 @Component({
   selector: 'app-user-item',
@@ -7,9 +7,15 @@ import { User } from '../../models/User'
 })
 export class UserItemComponent implements OnInit {
   @Input() user: User
+  @Output() deleteUser: EventEmitter<User> = new EventEmitter()
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onDelete(user){
+    console.log('in delete')
+    this.deleteUser.emit(user)
   }
 
 }
