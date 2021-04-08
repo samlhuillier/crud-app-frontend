@@ -8,14 +8,27 @@ import { User } from '../../models/User'
 export class UserItemComponent implements OnInit {
   @Input() user: User
   @Output() deleteUser: EventEmitter<User> = new EventEmitter()
+  @Output() modifyUser: EventEmitter<User> = new EventEmitter()
+
+  name: string;
+  email: string;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
   onDelete(user){
-    console.log('in delete')
     this.deleteUser.emit(user)
   }
+
+  onSubmit(){
+    let user = {id: this.user.id, name: this.name, email: this.email}
+    this.modifyUser.emit(user)
+  }
+  // onModify(user){
+  //   user.name = user.name + 'MODIFICATION'
+  //   this.modifyUser.emit(user)
+  // }
 
 }

@@ -10,5 +10,6 @@
     *ngFor="let user of users" 
     [user]="user"
     (deleteUser)="deleteUser($event)"
+    (modifyUser)="modifyUser($event)"
     >
 </app-user-item>

@@ -28,7 +28,10 @@ export class UsersService {
   }
   deleteUser(user: User){
     const url = `${this.usersUrl}/${user.id}`
-    console.log(url)
     return this.http.delete<User>(url, httpOptions)
+  }
+  modifyUser(user: User){
+    const url = `${this.usersUrl}/${user.id}`
+    return this.http.put<User>(url, user, httpOptions)
   }
 }
