@@ -10,12 +10,17 @@ import { UserItemComponent } from './components/user-item/user-item.component';
 import { AddUserComponent } from './components/add-user/add-user.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DialogComponent } from './dialog/dialog.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
     UserItemComponent,
-    AddUserComponent
+    AddUserComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +29,8 @@ import {MatButtonModule} from '@angular/material/button';
     FormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatDialogModule,
+    MatFormFieldModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
