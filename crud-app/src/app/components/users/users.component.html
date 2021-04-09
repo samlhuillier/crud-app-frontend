@@ -4,16 +4,34 @@
     <li>{{user.id}} {{user.name}} {{user.email}}</li>
 </ul> -->
 
-<table style="width: 100%">
+<table id="customers">
     <tr>
+        <th>No</th>
         <th>Name</th>
         <th>Email</th> 
+        <th> </th> 
       </tr>
-<tr *ngFor="let user of users" app-user-item 
-        [user]="user"
-        (deleteUser)="deleteUser($event)"
-        (modifyUser)="modifyUser($event)"
-        >
+<tr *ngFor="let user of users; let i = index">
+    <td>{{i}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.email}}</td> 
+    <td>
+        <button class="Modify" (click)="wantModify(user)" mat-raised-button color="primary">Modify</button>
+        <button class="delete" (click)="deleteUser(user)" mat-raised-button color="warn">Delete</button>
+    </td> 
 </tr>
 </table>
+
+
+
+
+<!-- <app-user-item [user]="user"
+(deleteUser)="deleteUser($event)"
+(modifyUser)="modifyUser($event)"></app-user-item> -->
+<!-- <mat-list>
+    <mat-list-item *ngFor="let user of users"><app-user-item [user]="user"
+    (deleteUser)="deleteUser($event)"
+    (modifyUser)="modifyUser($event)"></app-user-item><mat-divider></mat-divider></mat-list-item>
+</mat-list> -->
+
 <app-add-user (addUser)="addUser($event)"></app-add-user>

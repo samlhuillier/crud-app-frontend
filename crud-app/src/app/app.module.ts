@@ -13,6 +13,9 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DialogComponent } from './dialog/dialog.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatTableModule} from '@angular/material/table';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     MatButtonModule,
     MatDialogModule,
     MatFormFieldModule,
+    MatTableModule,
+    MatDividerModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
