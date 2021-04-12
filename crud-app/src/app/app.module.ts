@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
-import { UserItemComponent } from './components/user-item/user-item.component';
+// import { UserItemComponent } from './components/user-item/user-item.component';
 import { AddUserComponent } from './components/add-user/add-user.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
@@ -21,7 +21,6 @@ import {MatListModule} from '@angular/material/list';
   declarations: [
     AppComponent,
     UsersComponent,
-    UserItemComponent,
     AddUserComponent,
     DialogComponent
   ],

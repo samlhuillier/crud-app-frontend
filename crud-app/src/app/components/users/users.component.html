@@ -1,10 +1,4 @@
-
-<!-- 
-<ul *ngFor="let user of users">
-    <li>{{user.id}} {{user.name}} {{user.email}}</li>
-</ul> -->
-
-<table id="customers">
+<table id="users">
     <tr>
         <th>No</th>
         <th>Name</th>
@@ -22,16 +16,5 @@
 </tr>
 </table>
 
-
-
-
-<!-- <app-user-item [user]="user"
-(deleteUser)="deleteUser($event)"
-(modifyUser)="modifyUser($event)"></app-user-item> -->
-<!-- <mat-list>
-    <mat-list-item *ngFor="let user of users"><app-user-item [user]="user"
-    (deleteUser)="deleteUser($event)"
-    (modifyUser)="modifyUser($event)"></app-user-item><mat-divider></mat-divider></mat-list-item>
-</mat-list> -->
 
 <app-add-user (addUser)="addUser($event)"></app-add-user>
